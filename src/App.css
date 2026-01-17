@@ -394,3 +394,166 @@ body {
     grid-column: span 2;
   }
 }
+
+/* Hardware Section */
+.hardware-section {
+  margin-top: 2rem;
+}
+
+.hardware-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.hardware-group h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.device-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.device-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s;
+}
+
+.device-item.broken {
+  border-color: var(--danger);
+  background: #fef2f2;
+}
+
+.device-item.active {
+  border-color: var(--success);
+}
+
+.device-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.device-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--accent-dark);
+}
+
+.device-type {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.device-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.working {
+  color: var(--success);
+}
+
+.broken {
+  color: var(--danger);
+}
+
+/* Actuator Specific */
+.device-item.actuator {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.device-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-main);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.actuator.active .device-icon {
+  background: var(--success);
+  color: white;
+}
+
+.state-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--bg-main);
+}
+
+.state-badge.ON {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.state-badge.OFF {
+  background: #f1f5f9;
+  color: var(--text-secondary);
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  background: white;
+  /* Ensure it matches table bg if needed */
+}
+
+.page-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-subtle);
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--bg-main);
+  color: var(--accent-dark);
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+}
